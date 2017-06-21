@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="../css/main.css" rel="stylesheet" />
+  <title></title>
+</head>
+
+<body>
+  <div5>
+    <div1>
+      {{#users}}
+        <img class="avatar" src='{{avatar}}' /><br />
+        <div2>
+          <br />
+          <br />
+          <h2>{{name}}</h2><br />
+          <div4>
+            {{#address}}
+        {{#city}}
+        {{city}},{{country}}
+        {{/city}}
+        {{^city}}
+        {{country}}
+        {{/city}}
+        {{/address}}
+         | {{#job}}{{job}},{{company}}{{/job}}{{^job}}<a>Available for hire</a>{{/job}}<br />
+        {{email}}|{{phone}}<br />
+        </div4>
+      </div2>
+    </div1>
+      <div3>
+        {{#university}}
+        <h4>Education</h4><c>{{#university}}{{ . }}{{/university}}</c>
+        {{/university}}
+        {{^university}}
+        {{/university}}
+        <br />
+        <h4>Skills</h4><c1>{{#skills}} {{ . }} {{/skills}}</c1>
+        </div3>
+    {{/users}}
+    </div5>
+  </body>
+</html>
